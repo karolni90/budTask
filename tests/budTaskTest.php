@@ -3,10 +3,12 @@
 namespace App\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use App\Tests\Traits\AssertTrait;
 
 class BudTaskTest extends WebTestCase
 {
-	
+	use AssertTrait;
+
 	protected function setUp()
     {
     	//Example data

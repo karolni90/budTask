@@ -24,7 +24,7 @@ class BudTaskTest extends WebTestCase
     	$this->transactionJson   = json_encode($transactionData);
     }
 
-    // These are no real unit tests, they are examples to try the new asserts methods
+    // These are not real unit tests, they are examples to try the new asserts methods
 
     public function testExampleShouldPass()
     {
@@ -32,20 +32,20 @@ class BudTaskTest extends WebTestCase
     
     	$this->assertPropertyExist('id', $this->transactionArray);    
    
-    	//$this->assertContainsValue('GBP', $this->transactionArray);
+    	$this->assertContainsValue('GBP', $this->transactionArray);
     	
 
     	//Object
 
     	$this->assertPropertyExist('id', $this->transactionObject);    	
 
-    	//$this->assertContainsValue('GBP', $this->transactionObject);
+    	$this->assertContainsValue('GBP', $this->transactionObject);
 
 
     	//Json String
     	$this->assertPropertyExist('id', $this->transactionJson);
 
-    	//$this->assertContainsValue('GBP', $this->transactionJson);
+    	$this->assertContainsValue('GBP', $this->transactionJson);
  	
     }
 
@@ -58,13 +58,13 @@ class BudTaskTest extends WebTestCase
     
     	$this->assertContainsValue('EUR', $this->transactionArray);
 
-
+		
     	//Object
     	$this->assertPropertyExist('description', $this->transactionObject);
     	
     	$this->assertContainsValue('EUR', $this->transactionObject);
 
-
+    	
     	//Json string
     	$this->assertPropertyExist('description', $this->transactionJson);
 
@@ -74,8 +74,9 @@ class BudTaskTest extends WebTestCase
     	$this->assertPropertyExist('id', $this->transactionObject->id);
 
     	$this->assertContainsValue('EUR', $this->transactionObject->id);
-    	
+   
     }
+    
     */
 
 }
